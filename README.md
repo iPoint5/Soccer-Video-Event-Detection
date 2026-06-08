@@ -1,12 +1,20 @@
 # Football Video Action Spotting Project
 
-这是一个基于 SoccerNet-v2 / CALF 的足球视频动作识别与动作定位项目。
+Football Video Action Spotting Project
 
-本版本已经将：
-- 训练流程
-- 视频全流程推理流程
+本项目基于 SoccerNet 官方发布的 SoccerNet-v2 数据集及其公开基线代码实现，在 CALF（Context-Aware Loss Function）框架基础上进行了功能扩展、结构调整与工程化改进。
 
-做了分离处理，并且将训练入口调整为更适合编辑器/IDE 调试的方式运行。若需要使用 FFmpeg / FFmpy，请自行安装并确保其可在环境 PATH 中被找到。
+相较于原始实现，本项目主要完成了以下工作：
+
+对训练流程与视频推理流程进行了拆分与重构，降低模块间耦合度；
+调整训练入口，使其更适合在 VS Code 等 IDE 中直接调试与运行；
+整理并优化完整视频推理流程，支持从输入视频到事件预测结果的端到端处理；
+补充自动化处理脚本与工程目录结构，便于实验复现与后续开发；
+保留与原始 CALF 框架兼容的训练方式与模型结构，便于与官方基线结果进行比较。
+
+需要说明的是，本项目并非 SoccerNet 官方仓库的镜像版本。部分代码来源于 SoccerNet 官方公开实现，并在此基础上根据研究需求进行了修改与扩展。若需要了解原始实现或获取最新版本代码，请参考 SoccerNet 官方仓库。
+
+若需要使用 FFmpeg / FFmpy，请自行安装并确保其可在系统 PATH 中被正确访问。
 
 ---
 
@@ -185,3 +193,14 @@ pip install scikit-video tensorflow==2.3.0 imutils opencv-python==3.4.11.41 Socc
 - 特征提取方式必须严格保持一致，尤其是 TensorFlow 与 PyTorch 版本
 
 如果后续要继续开发或复现实验，请优先保持“训练与推理完全一致”的原则。
+## 项目来源与致谢
+
+本项目部分代码基于 SoccerNet 官方公开实现修改而来，相关数据集、评测协议及基线方法请参考 SoccerNet 官方资源。
+
+如果本项目被用于学术研究，请同时引用：
+
+SoccerNet-v2 数据集相关论文；
+CALF（Context-Aware Loss Function）相关论文；
+SoccerNet 官方代码仓库及其文档。
+
+本仓库中的修改内容主要涉及训练流程整理、推理流程重构、工程化部署以及实验相关改进，不代表 SoccerNet 官方实现。
