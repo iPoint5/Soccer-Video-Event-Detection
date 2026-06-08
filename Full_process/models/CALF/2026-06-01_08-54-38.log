@@ -1,0 +1,62 @@
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]  Starting main function
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]  Parameters:
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]       video_path : E:\code\video_processing\calf_pipeline\video\england_epl\2014-2015\2015-02-21 - 18-00 Crystal Palace 1 - 2 Arsenal\2.mkv
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]         features : ResNET_PCA512.npy
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]       max_epochs : 1000
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]     load_weights : None
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]       model_name : CALF
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]        test_only : False
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]        challenge : False
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]         K_params : None
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]     num_features : 512
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]  chunks_per_epoch : 18000
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]  evaluation_frequency : 20
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]      dim_capsule : 16
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]        framerate : 2
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]       chunk_size : 120
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]  receptive_field : 40
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]     lambda_coord : 5.0
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]     lambda_noobj : 0.5
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]  loss_weight_segmentation : 0.000367
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]  loss_weight_detection : 1.0
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]       batch_size : 32
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]               LR : 0.001
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]         patience : 25
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]              GPU : -1
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]   max_num_worker : 4
+2026-06-01 08:54:38,085 [MainThread  ] [INFO ]         loglevel : INFO
+2026-06-01 08:55:45,290 [MainThread  ] [INFO ]  extracting features for video inference/outputs/videoLQ.mkv
+2026-06-01 08:55:55,941 [MainThread  ] [INFO ]  frames (5948, 224, 224, 3), fps=1.9999798253548213
+2026-06-01 08:59:04,983 [MainThread  ] [INFO ]  features (5948, 2048), fps=1.9999798253548213
+2026-06-01 08:59:05,152 [MainThread  ] [WARNI]  D:\conda_and_env\envs\video_deal\lib\site-packages\sklearn\base.py:318: UserWarning: Trying to unpickle estimator PCA from version 0.23.2 when using version 1.2.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+
+2026-06-01 08:59:05,152 [MainThread  ] [INFO ]  reducing features inference/outputs/features.npy
+2026-06-01 08:59:05,242 [MainThread  ] [INFO ]  ContextAwareModel(
+  (conv_1): Conv2d(1, 128, kernel_size=(1, 512), stride=(1, 1))
+  (conv_2): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1))
+  (pad_p_1): ZeroPad2d(padding=(0, 0, 5, 6), value=0.0)
+  (pad_p_2): ZeroPad2d(padding=(0, 0, 13, 13), value=0.0)
+  (pad_p_3): ZeroPad2d(padding=(0, 0, 19, 20), value=0.0)
+  (pad_p_4): ZeroPad2d(padding=(0, 0, 39, 40), value=0.0)
+  (conv_p_1): Conv2d(32, 8, kernel_size=(12, 1), stride=(1, 1))
+  (conv_p_2): Conv2d(32, 16, kernel_size=(27, 1), stride=(1, 1))
+  (conv_p_3): Conv2d(32, 32, kernel_size=(40, 1), stride=(1, 1))
+  (conv_p_4): Conv2d(32, 64, kernel_size=(80, 1), stride=(1, 1))
+  (pad_seg): ZeroPad2d(padding=(0, 0, 1, 1), value=0.0)
+  (conv_seg): Conv2d(152, 272, kernel_size=(3, 1), stride=(1, 1))
+  (batch_seg): BatchNorm2d(240, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+  (max_pool_spot): MaxPool2d(kernel_size=(3, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  (pad_spot_1): ZeroPad2d(padding=(0, 0, 1, 1), value=0.0)
+  (conv_spot_1): Conv2d(289, 32, kernel_size=(3, 1), stride=(1, 1))
+  (max_pool_spot_1): MaxPool2d(kernel_size=(3, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  (pad_spot_2): ZeroPad2d(padding=(0, 0, 1, 1), value=0.0)
+  (conv_spot_2): Conv2d(32, 16, kernel_size=(3, 1), stride=(1, 1))
+  (max_pool_spot_2): MaxPool2d(kernel_size=(3, 1), stride=(2, 1), padding=0, dilation=1, ceil_mode=False)
+  (conv_conf): Conv2d(464, 30, kernel_size=(1, 1), stride=(1, 1))
+  (conv_class): Conv2d(464, 255, kernel_size=(1, 1), stride=(1, 1))
+  (softmax): Softmax(dim=-1)
+)
+2026-06-01 08:59:05,242 [MainThread  ] [INFO ]  Total number of parameters: 578245
+2026-06-01 08:59:18,786 [MainThread  ] [INFO ]  Total Execution Time is 280.70073199272156 seconds

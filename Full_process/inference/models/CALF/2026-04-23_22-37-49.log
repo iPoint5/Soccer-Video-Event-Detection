@@ -1,0 +1,30 @@
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]  Starting main function
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]  Parameters:
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]       video_path : E:\code\video_processing\calf_pipeline\video\england_epl\2014-2015\2015-02-21 - 18-00 Chelsea 1 - 1 Burnley\2.mkv
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]         features : ResNET_PCA512.npy
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]       max_epochs : 1000
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]     load_weights : None
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]       model_name : CALF
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]        test_only : False
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]        challenge : False
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]         K_params : None
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]     num_features : 512
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]  chunks_per_epoch : 18000
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]  evaluation_frequency : 20
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]      dim_capsule : 16
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]        framerate : 2
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]       chunk_size : 120
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]  receptive_field : 40
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]     lambda_coord : 5.0
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]     lambda_noobj : 0.5
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]  loss_weight_segmentation : 0.000367
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]  loss_weight_detection : 1.0
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]       batch_size : 32
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]               LR : 0.001
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]         patience : 25
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]              GPU : -1
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]   max_num_worker : 4
+2026-04-23 22:37:49,260 [MainThread  ] [INFO ]         loglevel : INFO
+2026-04-23 22:38:38,892 [MainThread  ] [INFO ]  extracting features for video inference/outputs/videoLQ.mkv
+2026-04-23 22:38:49,601 [MainThread  ] [INFO ]  frames (5400, 224, 224, 3), fps=1.9999777780246886
+2026-04-23 22:41:35,380 [MainThread  ] [INFO ]  features (5400, 2048), fps=1.9999777780246886
